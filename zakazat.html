@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta id="view" name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/datepicker.material.css" />
+        <link rel="stylesheet" href="css/style.min.css" />
+        <title>@@title</title>
+        <!-- Add icon library -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <script src="js/datepicker.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    </head>
+    <body>
+        <!--header-->
+        <div class="header">
+            <div class="container mx-auto">
+                <div class="flex items-center justify-between py-2">
+                    <a class="md:w-auto" href="index.html"><img class="logo" src="./img/logo.svg" alt="" /></a>
+                    <div class="pl-10 lg:pl-10 xl:pl-0 flex flex-1 flex-col block-header">
+                        <div
+                            class="lg:hidden flex items-center hidden md:flex pt-3.5 adress justify-between font-MontserratMedium uppercase text-xs lg:text-base text-dark-grey"
+                        >
+                            <div class="">
+                                <i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
+                                <a class="" href="tel:">тел: 8 800 987 65 43</a>
+                            </div>
+
+                            <button class="myBtn-open lg:block btn-1 text-dark-grey font-MontserratBold" type="button">
+                                заказать звонок
+                            </button>
+                        </div>
+                        <div class="hidden md:flex justify-end lg:justify-between items-center py-3.5 pt-5 pb-2">
+                            <div class="menu menu-width flex-1">
+                                <ul
+                                    class="flex lg:justify-evenly md:justify-between text-brownish-grey font-MontserratRegular text-base"
+                                >
+                                    <li class="md:py-0 py-3"><a href="index.html#catalog">Каталог</a></li>
+                                    <li class="md:py-0 py-3"><a href="zakazchikam.html">Заказчикам</a></li>
+                                    <li class="md:py-0 py-3"><a href="vladelcam.html">Владельцам</a></li>
+                                    <li class="md:hidden lg:block">
+                                        <i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
+                                        <a class="" href="tel:">тел: 8 800 987 65 43</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="myBtn-open hidden lg:block btn-1 text-dark-grey font-MontserratBold">
+                                заказать звонок
+                            </button>
+                        </div>
+                    </div>
+                    <!--burger menu-->
+                    <div class="flex md:hidden relative menu-mob">
+                        <div class="burger">
+                            <span></span>
+                        </div>
+                        <div class="menu_mob">
+                            <div class="w-full flex justify-center">
+                                <div class="flex flex-col">
+                                    <ul
+                                        class="items-start flex flex-col justify-between text-brownish-grey font-MontserratRegular text-xl mb-4"
+                                    >
+                                        <li class="md:py-0 py-3"><a href="index.html#catalog">Каталог</a></li>
+                                        <li class="md:py-0 py-3"><a href="zakazchikam.html">Заказчикам</a></li>
+                                        <li class="md:py-0 py-3"><a href="vladelcam.html">Владельцам</a></li>
+                                        <!--                                <li class="py-3"><a href="#">Контакты</a></li>-->
+                                    </ul>
+                                    <div
+                                        class="flex flex-col font-MontserratMedium uppercase 2sm:text-base text-sm text-dark-grey"
+                                    >
+                                        <div class="flex items-baseline py-3">
+                                            <i class="fa fa-lg fa-map-marker pr-4" aria-hidden="true"></i>
+                                            <span class="">г. Краснодар, ул. советская 12</span>
+                                        </div>
+                                        <div class="flex items-baseline py-3">
+                                            <i class="fa fa-lg fa-envelope pr-2" aria-hidden="true"></i>
+                                            <span>info.arst@mail.ru</span>
+                                        </div>
+                                        <div class="flex items-center py-3">
+                                            <i class="fa fa-lg fa-phone pr-2" aria-hidden="true"></i>
+                                            <span>тел: 8 800 987 65 43</span>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="myBtn-open btn-1 text-dark-grey font-MontserratBold text-center"
+                                        type="button"
+                                    >
+                                        заказать звонок
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--zakaz cards-->
+        <section class="zakaz bg-grey pb-10">
+            <div class="container px-0 mx-auto">
+                <span class="font-MontserratSemiBold text-dark-grey text-center block lg:text-32 my-5 py-8"
+                    >Заказать технику</span
+                >
+
+                <div class="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-x-0">
+                    <!--card-1-->
+                    <div
+                        class="col-span-2 flex flex-col justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg lg:px-12 lg:py-10 lg:pb-10 pb-5 md:px-7 md:pt-5 md:mb-4"
+                    >
+                        <span
+                            class="font-MontserratSemiBold lg:text-32 text-dark-grey text-center self-center py-5 md:py-0 md:pb-10"
+                            >Гусеничный экскаватор</span
+                        >
+
+                        <img src="./img/eks.png" alt="" />
+
+                        <div class="w-full -mt-48">
+                            <div id="massa" class="mass selected-1 flex flex-col px-7 md:p-0 w-full">
+                                <span class="font-MontserratMedium text-base my-5 mt-10">Масса</span>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 selected-1">
+                                    <button
+                                        onclick="setActive('massa', this)"
+                                        data-button="1500"
+                                        class="push-button activated"
+                                        data-id="26"
+                                    >
+                                        от 5т. до 9т.
+                                    </button>
+
+                                    <button onclick="setActive('massa', this)" data-button="1900" class="push-button">
+                                        от 10т. до 30т.
+                                    </button>
+
+                                    <button onclick="setActive('massa', this)" data-button="2500" class="push-button">
+                                        Более 30т.
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col px-7 md:px-0">
+                                <span class="font-MontserratMedium text-base my-5 mt-10">Глубина копания</span>
+                                <div class="relative my-5">
+                                    <input
+                                        type="range"
+                                        value="5"
+                                        min="1"
+                                        max="10"
+                                        step="1"
+                                        id="r1"
+                                        class="absolute"
+                                        oninput="setRange(this)"
+                                    />
+                                    <div id="test" class="absolute" style="width: 45%">
+                                        <div class="flex justify-end value_obj w-full relative">5м</div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between my-5">
+                                    <div>
+                                        <span id="rangeValueMin" class="py-2">от 3м</span>
+                                    </div>
+                                    <div>
+                                        <span id="rangeValueMax" class="py-2">до 8м</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rezhim selected-1 flex flex-col px-7 md:p-0 w-full">
+                                <span class="font-MontserratMedium text-base my-5 md:mt-5 mt-5">Режим работы</span>
+
+                                <div id="rezhim" class="grid grid-cols-1 md:grid-cols-2 gap-5 selected-1">
+                                    <button
+                                        onclick="setActive('rezhim', this)"
+                                        data-button="10"
+                                        class="push-button activated"
+                                    >
+                                        односменный
+                                    </button>
+                                    <button onclick="setActive('rezhim', this)" data-button="20" class="push-button">
+                                        двухсменный
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="set-date flex flex-col px-7 md:p-0 w-full">
+                                <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Период работы</span>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-end">
+                                    <input
+                                        type="text"
+                                        id="datepicker"
+                                        class="py-3 my-3 lg:my-0 bg-grey col-span-3 rounded-xl px-4 focus:outline-none bg-grey w-full"
+                                    />
+                                    <input
+                                        type="text"
+                                        id="datepicker_2"
+                                        class="py-3 my-3 lg:my-0 bg-grey col-span-3 rounded-xl px-4 focus:outline-none bg-grey w-full datepicker_2"
+                                    />
+
+                                    <span class="md:col-span-2 lg:col-span-1 font-MontserratRegular text-sm"
+                                        >Стоимость от месяца дешевле на 5%</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="flex flex-col px-7 md:p-0 w-full">
+                                <span class="font-MontserratMedium text-base my-5 mt-10">Краткое описание работ</span>
+                                <div class="flex-auto w-full mb-1 text-xs space-y-2">
+                                    <label class=""></label>
+                                    <textarea
+                                        rows="5"
+                                        name="textarea"
+                                        id="textarea"
+                                        class="text-base w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg py-4 px-4"
+                                        placeholder="Введите сообщение..."
+                                    ></textarea>
+                                </div>
+                            </div>
+
+                            <div class="counter flex flex-col px-7 md:p-0 w-full">
+                                <span class="font-MontserratMedium text-base my-5 md:mt-10 mt-5">Количество</span>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                                    <div class="lg:col-span-2 md:col-span-3">
+                                        <div class="custom-number-input h-10 w-auto">
+                                            <label
+                                                for="custom-input-number"
+                                                class="w-full text-gray-700 text-sm font-semibold"
+                                            ></label>
+                                            <div
+                                                class="flex flex-row h-12 w-full rounded-lg relative bg-transparent mt-1"
+                                            >
+                                                <button
+                                                    id="decrement"
+                                                    onclick="decrement()"
+                                                    data-action="decrement"
+                                                    class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none"
+                                                >
+                                                    <span class="m-auto text-2xl font-thin">−</span>
+                                                </button>
+                                                <input
+                                                    id="custom-input-number"
+                                                    type="number"
+                                                    class="outline-none focus:outline-none text-center w-full bg-grey font-semibold text-md hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+                                                    name="custom-input-number"
+                                                    min="1"
+                                                    value="1"
+                                                    onchange="setValue(this)"
+                                                />
+                                                <button
+                                                    id="increment"
+                                                    onclick="increment()"
+                                                    data-action="increment"
+                                                    class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer"
+                                                >
+                                                    <span class="m-auto text-2xl font-thin">+</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:col-span-1 md:col-span-3 flex justify-center items-start">
+                                        <p>Изменения в стоимости отражаются в окне “итоговая стоимость”</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="adres flex flex-col px-7 md:p-0 w-full">
+                                <span class="font-MontserratMedium text-base my-5">Адрес подачи техники</span>
+                                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:gap-5 gap-x-0">
+                                    <input
+                                        type="text"
+                                        id="address"
+                                        class="py-3 my-3 lg:my-0 bg-grey col-span-3 rounded-xl px-4 focus:outline-none bg-grey w-full"
+                                        placeholder="Ваш адрес"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sticky-block">
+                        <div class="card">
+                            <!--1 блок-->
+                            <div
+                                class="justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg pt-7 my-5 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3"
+                            >
+                                <div class="flex flex-col h-full w-full justify-between">
+                                    <span class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center"
+                                        >Итоговая стоимость</span
+                                    >
+                                    <div>
+                                        <div class="flex justify-between my-2 lg:my-5">
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                >Тариф:</span
+                                            >
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ><span id="tarif"></span> р/час с НДС</span
+                                            >
+                                        </div>
+                                        <div class="flex justify-between my-2 lg:my-5">
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                >Время смены:</span
+                                            >
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ><span>8</span> часов</span
+                                            >
+                                        </div>
+                                        <div class="flex justify-between my-2 lg:my-5">
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                >Срок аренды:</span
+                                            >
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ><span>30 дней</span> <span id="daysOf"></span
+                                            ></span>
+                                        </div>
+                                        <div class="flex justify-between items-center my-2 lg:my-5">
+                                            <span
+                                                class="font-MontserratMedium lg:text-base text-dark-grey text-left leading-none self-end"
+                                                >Итог:</span
+                                            >
+                                            <span
+                                                id="totalCost"
+                                                class="font-MontserratBold lg:text-32 text-dark-grey text-right leading-none self-end"
+                                            ></span>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onclick="order()"
+                                        class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center"
+                                    >
+                                        Заказать
+                                    </button>
+
+                                    <div class="w-full mt-5 text-center">
+                                        <span class="font-MontserratRegular text-base text-brownish-grey"
+                                            ><em>Минимальный срок аренды 30 дней</em></span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--2-блок-->
+                            <div
+                                class="rounded-xl bg-white overflow-hidden shadow-lg pt-7 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3"
+                            >
+                                <div class="flex justify-center items-center">
+                                    <button
+                                        id="woNds"
+                                        class="pt-5 md:text-12 lg:text-base mx-auto btn-zakaz self-start px-4 md:px-8 text-dark-grey font-MontserratBold text-center"
+                                    >
+                                        Рассчитать без НДС
+                                    </button>
+                                </div>
+
+                                <div
+                                    id="block"
+                                    style="display: none"
+                                    class="flex flex-col h-full w-full justify-between"
+                                >
+                                    <span class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center"
+                                        >Итоговая стоимость без НДС</span
+                                    >
+                                    <div>
+                                        <!--тариф без ндс-->
+                                        <div class="flex justify-between my-2 lg:my-5">
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                >Тариф</span
+                                            >
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ><span id="tarifWo"></span> р/час без НДС</span
+                                            >
+                                        </div>
+                                        <div class="flex justify-between my-2 lg:my-5">
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                >Время смены:</span
+                                            >
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ><span id="hours1"></span> часов</span
+                                            >
+                                        </div>
+                                        <div class="flex justify-between my-2 lg:my-5">
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                >Срок аренды:</span
+                                            >
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ><span id="days1"></span> <span id="daysOf1"></span
+                                            ></span>
+                                        </div>
+                                        <div class="flex justify-between hidden my-2 lg:my-5">
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                >НДС</span
+                                            >
+                                            <span
+                                                class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ><span id="nds"></span>руб.</span
+                                            >
+                                        </div>
+                                        <!--/тариф без ндс-->
+                                        <div class="flex justify-between items-center my-2 lg:my-5">
+                                            <span
+                                                class="font-MontserratMedium lg:text-base text-dark-grey text-left leading-none self-end"
+                                                >Итог:</span
+                                            >
+                                            <span
+                                                id="totalCostWo"
+                                                class="font-MontserratBold lg:text-32 text-dark-grey text-right leading-none self-end"
+                                            ></span>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center"
+                                    >
+                                        заказать
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="order-wrapper">
+                                <div
+                                    class="justify-center items-center rounded-xl bg-white overflow-hidden shadow-lg pt-7 my-5 md:mt-0 px-7 md:pt-5 lg:pt-10 lg:pb-10 pb-5 md:px-3"
+                                >
+                                    <div class="flex flex-col h-full w-full justify-between">
+                                        <span
+                                            class="block font-MontserratSemiBold lg:text-32 text-dark-grey text-center"
+                                            >Оформление заказа</span
+                                        >
+                                        <div>
+                                            <div class="flex justify-between my-2 lg:my-5">
+                                                <span
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                    >Масса:</span
+                                                >
+                                                <span
+                                                 id="order-mass"
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                    ></span
+                                                ></span>
+                                            </div>
+                                            <div class="flex justify-between my-2 lg:my-5">
+                                                <span
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                    >Глубина копания: <span></span
+                                                ></span>
+                                                <span
+                                                    id="order-depth"
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ></span>
+                                            </div>
+                                            <div class="flex justify-between my-2 lg:my-5">
+                                                <span
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                    >Режим работы: <span></span
+                                                ></span>
+                                                <span
+                                                    id="order-rezhim"
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ></span>
+                                            </div>
+                                            <div class="flex justify-between my-2 lg:my-5">
+                                                <span
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                    >Период работы: <span></span
+                                                ></span>
+                                                <span
+                                                    id="order-period"
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ></span>
+                                            </div>
+                                            
+                                            <div class="flex justify-between my-2 lg:my-5">
+                                                <span
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                    >Кол-во техники: <span></span
+                                                ></span>
+                                                <span
+                                                    id="order-count"
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ></span>
+                                            </div>
+                                            <div class="flex justify-between my-2 lg:my-5">
+                                                <span
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                    >Адрес: <span></span
+                                                ></span>
+                                                <span
+                                                    id="order-address"
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-right"
+                                                ></span>
+                                            </div>
+                                            <div class="my-2 lg:my-5">
+                                                <b
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey text-left"
+                                                    >Описание: <span></span
+                                                ></b>
+                                                <pre
+                                                    id="order-comment"
+                                                    class="font-MontserratMedium lg:text-sm md:text-sm text-light-grey"
+                                                ></pre>
+                                            </div>
+                                        </div>
+
+                                        <div class="w-full mt-5 text-center">
+                                            <span class="font-MontserratRegular text-base text-brownish-grey"
+                                                >Оставьте заявку по номеру <em>8 800 987 65 43</em></span
+                                            >
+                                        </div>
+                                        <button
+                                            onclick="closeOrder()"
+                                            class="mx-auto btn-zakaz self-start lg:px-20 px-16 mt-5 text-dark-grey font-MontserratBold text-base text-center"
+                                        >
+                                            Готово
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--footer-->
+        <footer class="footer">
+            <div class="container mx-auto">
+                <div class="pt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
+                    <div class="flex justify-center">
+                        <div class="flex flex-col justify-evenly items-start w-full md:w-auto">
+                            <img class="pb-5 md:pb-0" src="./img/logo.svg" alt="" />
+                            <span class="title font-MontserratSemiBold text-center lg:text-left text-lg py-5"
+                                >Являемся членами ассоциации НААСТ</span
+                            >
+                            <a class="w-full" href="https://naast.ru/"><img src="./img/nast-logo.svg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="flex flex-col border-b-footer w-full md:w-auto">
+                            <span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3"
+                                >Карта сайта</span
+                            >
+                            <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3" href="#"
+                                >Каталог</a
+                            >
+                            <a
+                                class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                                href="zakazchikam.html"
+                                >Заказчикам</a
+                            >
+                            <a
+                                class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                                href="vladelcam.html"
+                                >Владельцам</a
+                            >
+                            <a
+                                class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                                href="sotrud.html"
+                                >Сотрудничество</a
+                            >
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="flex flex-col w-full md:w-auto">
+                            <span class="font-MontserratMedium lg:text-22 text-lg text-dark-grey pb-3">Контакты</span>
+                            <span class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                                >Адрес: г.Краснодар, ул.Советская 12</span
+                            >
+                            <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3"
+                                >Email: info.arst@mail</a
+                            >
+                            <a class="font-MontserratRegular text-base md:text-sm text-brownish-grey py-3">
+                                Тел: 800 987 65 43</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid sub-footer pt-5">
+                <div class="container mx-auto text-center border-top-footer">
+                    <div class="flex flex-col md:flex-row items-center justify-between py-8 md:py-10">
+                        <p class="font-MontserratRegular text-light-grey text-sm">
+                            Copyright 2021 - ARST. All Rights Reserved
+                        </p>
+                        <p class="font-MontserratRegular text-light-grey text-sm">
+                            <a href="https://dev-pro.ru/" target="_blank">Created by - DevPro</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer components-->
+        <div id="myModal" class="modal-block">
+            <div class="modal absolute">
+                <form name="" id="form" action="" method="post" class="bg-white border rounded-lg md:p-6 p-5">
+                    <div class="flex items-center justify-between">
+                        <p class="font-MontserratSemiBold text-32 md:text-lg text-base">Контактная информация</p>
+                        <img class="close-btn w-full items-center cursor-pointer pt-1" src="./img/cancel.svg" alt="" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label
+                            class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1"
+                            for="username"
+                        >
+                            Ваше имя
+                        </label>
+                        <input
+                            class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg py-2 md:py-1 px-4"
+                            id="username"
+                            type="text"
+                            placeholder="Ф.И.О."
+                        />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1" for="phone">
+                            Номер телефона
+                        </label>
+                        <input
+                            class="text-base w-full block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg py-2 md:py-1 px-4"
+                            id="phone"
+                            type="text"
+                            placeholder="+7 (9хх)-ххх-хх-хх"
+                        />
+                    </div>
+
+                    <div class="flex flex-col w-full">
+                        <span class="font-MontserratMedium text-base md:text-xs py-3 md:py-2 py-1">Описание</span>
+                        <div class="flex-auto w-full text-xs space-y-2">
+                            <label class=""></label>
+                            <textarea
+                                required=""
+                                name="message"
+                                id=""
+                                class="text-base w-full min-h-[100px] max-h-[300px] h-28 appearance-none block w-full bg-grey text-grey-darker border border-grey-lighter rounded-lg py-4 px-4"
+                                placeholder="Введите сообщение..."
+                                spellcheck="false"
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center pt-10">
+                        <button
+                            class="btn-1 text-black font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline uppercase"
+                            type="submit"
+                        >
+                            заказать звонок
+                        </button>
+                        <div class="flex pt-5 items-center">
+                            <img class="self-start" src="./img/info.svg" alt="" />
+                            <p class="pl-1 font-MontserratRegular text-light-grey lg:text-base md:text-xxs text-12">
+                                С вами свяжется наш менеджер.
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js/libs.min.js"></script>
+        <script src="js/main.min.js"></script>
+        <script>
+            new Datepicker("#datepicker", {
+                min: (function () {
+                    var t = new Date();
+                    return t.setDate(t.getDate() + 28), t;
+                })(),
+                fromValue: function () {
+                    var t = new Date();
+                    return t.setDate(t.getDate() + 29);
+                },
+            });
+            new Datepicker("#datepicker_2", {
+                min: (function () {
+                    var t = new Date();
+                    return t.setDate(t.getDate() + 28), t;
+                })(),
+                fromValue: function () {
+                    var t = new Date();
+                    return t.setDate(t.getDate() + 29);
+                },
+            });
+
+            function setActive(id, target) {
+                console.log(id, target);
+                const container = document
+                    .querySelector(`#${id}`)
+                    .querySelectorAll("button")
+                    .forEach((it) => {
+                        console.log(it);
+                        it.classList.remove("activated");
+                    });
+                target.classList.add("activated");
+            }
+
+            let value = 1;
+
+            function decrement() {
+                value--;
+                if (value < 1) {
+                    value = 1;
+                }
+                document.querySelector(`#custom-input-number`).value = value;
+            }
+            function increment() {
+                value++;
+                document.querySelector(`#custom-input-number`).value = value;
+            }
+            function setValue(target) {
+                value = target.value;
+            }
+
+            let rangeValue = 5;
+
+            function setRange(target) {
+                rangeValue = target.value;
+                document.querySelector(`#test`).style.width = `${rangeValue * 10 - (10 - rangeValue)}%`;
+                document.querySelector(`#test div`).innerHTML = `${rangeValue}м`;
+            }
+
+            function order() {
+                document.querySelector(`#order-wrapper`).style.display = 'flex'
+                console.log(document.querySelector(`#massa .activated`))
+
+                document.querySelector(`#order-mass`).innerHTML = document.querySelector(`#massa .activated`).innerHTML
+                document.querySelector(`#order-depth`).innerHTML = `${rangeValue}м`
+                document.querySelector(`#order-rezhim`).innerHTML = document.querySelector(`#rezhim .activated`).innerHTML
+                document.querySelector(`#order-period`).innerHTML = `${document.querySelector(`#datepicker`).value} - ${document.querySelector(`#datepicker_2`).value}`
+                document.querySelector(`#order-count`).innerHTML = `${value} ед.`
+                document.querySelector(`#order-address`).innerHTML = document.querySelector(`#address`).value
+                document.querySelector(`#order-comment`).innerHTML = document.querySelector(`#textarea`).value
+            }
+
+            function closeOrder() {
+                document.querySelector(`#order-wrapper`).style.display = 'none'
+            }
+        </script>
+    </body>
+</html>
